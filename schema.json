@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "member": {
+      "type": "object",
+      "additionalProperties": false,
+      "maxProperties": 1,
+      "minProperties": 1,
+      "patternProperties": {
+        "^[a-zA-Z0-9]*$": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "description"
+          ]
+        }
+      }
+    }
+  },
+  "required": [
+    "member"
+  ]
+}

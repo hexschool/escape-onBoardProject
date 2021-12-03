@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>六六六資訊 | 員工報到牆</title>
+    <title>員工報到牆 | 梅添涼軟體</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   </head>
   <style>
@@ -17,20 +17,21 @@
   </style>
   <body class="bg">
     <div class="container pt-5">
-      <h2 class="text-center bg-light p-3">六六六資訊 | 員工報到牆</h2>
+      <h2 class="text-center bg-light p-3">員工報到牆 | 梅添涼軟體</h2>
       <div class="row mt-5" id="member"></div>
     </div>
     <script>
       fetch('./combined.json').then(res => {
         return res.json();
       }).then(data => {
-        console.log(data)
         let str = '';
-        Object.values(data.member).forEach(member => {
+        Object.keys(data.member).forEach(key => {
+          const memberData = data.member[key];
           str += `<div class="col-md-3 rounded">
-            <div class="bg-light p-3">
-              <h4>${member.name}</h4>
-              <p class="mb-0 text-muted">${member.description}</p>
+            <div class="bg-light px-3 py-4 position-relative">
+              <p class="mb-0 text-muted position-absolute" style="right: 8px; top: 2px; opacity: 0.2"><small>${key}</small></p>
+              <h4>${memberData.name}</h4>
+              <p class="mb-0 text-muted">${memberData.description}</p>
             </div>
           </div>`
         });
