@@ -40,7 +40,7 @@ function browserSyncReload(done) {
   done();
 }
 
-function deploy() {
+function deployToGHPages() {
   return gulp.src("./dist/**/*")
     .pipe(deploy())
 }
@@ -49,5 +49,5 @@ function watch() {
   return gulp.watch(['source/*.ejs', 'source/**/*.ejs']).on('change', gulp.series(parseEjs, browserSyncReload));
 }
 exports.default = gulp.series(checkJsonSchema, mergeGulpFiles, parseEjs, browser, watch)
-exports.build = gulp.parallel(mergeGulpFiles, parseEjs, deploy)
+exports.build = gulp.parallel(mergeGulpFiles, parseEjs, deployToGHPages)
 exports.check = gulp.parallel(checkJsonSchema)
