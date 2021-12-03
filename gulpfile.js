@@ -49,5 +49,5 @@ function watch() {
   return gulp.watch(['source/*.ejs', 'source/**/*.ejs']).on('change', gulp.series(parseEjs, browserSyncReload));
 }
 exports.default = gulp.series(checkJsonSchema, mergeGulpFiles, parseEjs, browser, watch)
-exports.build = gulp.parallel(mergeGulpFiles, parseEjs, deployToGHPages)
+exports.build = gulp.series(mergeGulpFiles, parseEjs, deployToGHPages)
 exports.check = gulp.parallel(checkJsonSchema)
