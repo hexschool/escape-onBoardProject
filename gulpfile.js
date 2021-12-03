@@ -4,7 +4,6 @@ const jsonSchema = require("gulp-json-schema");
 const merge = require('gulp-merge-json');
 const ejs = require("gulp-ejs");
 const rename = require('gulp-rename');
-const deploy = require('gulp-gh-pages');
  
 function checkJsonSchema(done) {
   return gulp.src("jsonFiles/*.json")
@@ -40,14 +39,9 @@ function browserSyncReload(done) {
   done();
 }
 
-function deployToGHPages() {
-  return gulp.src("./dist/**/*")
-    .pipe(deploy())
-}
-
 function watch() {
   return gulp.watch(['source/*.ejs', 'source/**/*.ejs']).on('change', gulp.series(parseEjs, browserSyncReload));
 }
 exports.default = gulp.series(checkJsonSchema, mergeGulpFiles, parseEjs, browser, watch)
-exports.build = gulp.series(mergeGulpFiles, parseEjs, deployToGHPages)
+exports.build = gulp.series(mergeGulpFiles, parseEjs)
 exports.check = gulp.parallel(checkJsonSchema)
