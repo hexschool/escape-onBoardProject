@@ -27,8 +27,8 @@
         let str = '';
         Object.keys(data.member).forEach(key => {
           const memberData = data.member[key];
-          str += `<div class="col-md-3 rounded">
-            <div class="bg-light px-3 py-4 position-relative">
+          str += `<div class="col-lg-3 col-md-4 mb-3 rounded">
+            <div class="bg-light h-100 px-3 py-4 position-relative">
               <p class="mb-0 text-muted position-absolute" style="right: 8px; top: 2px; opacity: 0.2"><small>${key}</small></p>
               <h4>${memberData.name}</h4>
               <p class="mb-0 text-muted">${memberData.description}</p>
