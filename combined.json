@@ -12,6 +12,10 @@
 			"name": "Jamie",
 			"description": "新進員工報到"
 		},
+		"1m8lMZVCcmgnvy9K": {
+			"name": "Susan",
+			"description": "我是剛滿四個月的前端新人，請多指教！"
+		},
 		"28AmDSM1052fDWYo": {
 			"name": "Evan Chiang",
 			"description": "菜鳥前端到職中"
@@ -252,9 +256,21 @@
 			"name": "瑀君",
 			"description": "大家早安大家午安大家晚安，請多指教"
 		},
+		"rLMhTwlQcvAOLixV": {
+			"name": "Coco",
+			"description": "請多多指教，想要加薪"
+		},
 		"rnyQxUTIkXyoYA1d": {
 			"name": "kaka",
 			"description": "斜槓鍊金"
+		},
+		"zB6whhVY59BGUU7K": {
+			"name": "葉子",
+			"description": "我其實是在六角學院當前端"
+		},
+		"tgEJGvtvt746vxKf": {
+			"name": "roger",
+			"description": "新人第一天報到，請多指教"
 		},
 		"tpNyT8Y60G1pSlOQ": {
 			"name": "Vito",
@@ -267,6 +283,14 @@
 		"uwP8ZgDvwMJhkypb": {
 			"name": "Carol",
 			"description": "第一天報到"
+		},
+		"wBOqlxDq7czEHylX": {
+			"name": "Jerry Huang",
+			"description": "前端新手村，村民傑瑞"
+		},
+		"wHbMLtvbO6xoYhxE": {
+			"name": "Mick",
+			"description": "大家好，我是Mick，會一點點前端，一點點asp net，請大家多多指教"
 		},
 		"wWugXdwCGF0kIJSY": {
 			"name": "Shakira Fan",
@@ -283,10 +307,6 @@
 		"wpoKHDPzjUhfkyKd": {
 			"name": "Lina Chen",
 			"description": "報到報到~~大家好！"
-		},
-		"zB6whhVY59BGUU7K": {
-			"name": "葉子",
-			"description": "我其實是在六角學院當前端"
 		}
 	}
 }
